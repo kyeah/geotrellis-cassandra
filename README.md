@@ -15,3 +15,16 @@ Then, start a worker using `./bin/spark-class org.apache.spark.deploy.worker.Wor
 
 Install Cassandra and launch a local cluster using `sudo service cassandra start`. Check that it is running using `nodetool status`.
 
+## Version Compatibility
+
+Note the version compatibility requirements between Spark, Cassandra, and Datastax's Connector.
+
+| Connector | Spark         | Cassandra |
+| --------- | ------------- | --------- |
+| 1.2       | 1.2           | 2.1, 2.0  |
+| 1.1       | 1.1, 1.0      | 2.1, 2.0  |
+| 1.0       | 1.0, 0.9      | 2.0       |
+
+# Running
+
+After setting up your Spark and Cassandra clusters, edit `Main.scala` to point to your clusters. Run `sbt run` to execute the `main` function, which provides an example of interacting with RDDs in your Cassandra tables.
