@@ -1,9 +1,11 @@
-*.class
+*#
+*~
+**.class
 *.log
 
 # sbt specific
-.cache/
-.history/
+.cache
+.history
 .lib/
 dist/*
 target/
